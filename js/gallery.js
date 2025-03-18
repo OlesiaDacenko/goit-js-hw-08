@@ -82,9 +82,9 @@ function createMarkup(arrey) {
     <a class="gallery-link" href="${item.original}">
     <img
     class="gallery-image"
-//        src="${item.preview}"
-//        data-source="${item.original}"
-//        alt="${item.description}" width="360"  height="200"/>
+      src="${item.preview}"
+      data-source="${item.original}"
+      alt="${item.description}" width="360"  height="200"/>
     </a>
     </li>
     `
@@ -93,7 +93,7 @@ function createMarkup(arrey) {
 }
 function handleClick(event) {
   event.preventDefault();
-  if (event.target === event.currentTarget) {
+  if (event.target.tagName !== "IMG") {
     return;
   }
 
